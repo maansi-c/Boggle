@@ -18,7 +18,7 @@ public class GameDictionary implements BoggleDictionary, Iterable<String>{
         Scanner scan = new Scanner(new File(filename));
         while(scan.hasNextLine()){
             boolean valid = true;
-            String next = scan.next();
+            String next = scan.nextLine();
             for (int i = 0; i < next.length(); i++){
                 if (!Character.isLetter(next.charAt(i))){
                     valid = false;
