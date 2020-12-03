@@ -134,7 +134,7 @@ public class Trie {
         else{
             goBack();
             while (!(current.getChildrenSearched().contains(false))){
-                    if (currentWord==""){
+                    if (currentWord.equals("")){
                         return false;
                     }
                     goBack();
@@ -209,7 +209,7 @@ class TrieNode{
 
     public boolean hasChild(Character c){
         for (int i = 0; i < next.size(); i++){
-            if (next.get(i).getLetter() == c){
+            if (next.get(i).getLetter().equals(c)){
                 return true;
             }
         }
@@ -218,7 +218,7 @@ class TrieNode{
 
     public TrieNode getChild(Character c){
         for (int i = 0; i < next.size(); i++){
-            if (next.get(i).getLetter() == c){
+            if (next.get(i).getLetter().equals(c)){
                 return next.get(i);
             }
         }
